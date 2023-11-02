@@ -289,10 +289,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mediapipe/tasks-vision@0.10.2-rc2":
-  version "0.10.2-rc2"
-  resolved "https://registry.npmjs.org/@mediapipe/tasks-vision/-/tasks-vision-0.10.2-rc2.tgz"
-  integrity sha512-b9ar6TEUo8I07n/jXSuKDu5HgzkDah9pe4H8BYpcubhCEahlfDD5ixE+9SQyJM4HXHXdF9nN/wRQT7rEnLz7Gg==
+"@mediapipe/tasks-vision@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.npmjs.org/@mediapipe/tasks-vision/-/tasks-vision-0.10.2.tgz"
+  integrity sha512-d8Q9uRK89ZRWmED2JLI9/blpJcfdbh0iEUuMo8TgkMzNfQBY1/GC0FEJWrairTwHkxIf6Oud1vFBP+aHicWqJA==
 
 "@radix-ui/primitive@1.0.1":
   version "1.0.1"
@@ -519,13 +519,13 @@
   resolved "https://registry.npmjs.org/@react-spring/types/-/types-9.6.1.tgz"
   integrity sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==
 
-"@react-three/drei@^9.75.0":
-  version "9.75.0"
-  resolved "https://registry.npmjs.org/@react-three/drei/-/drei-9.75.0.tgz"
-  integrity sha512-P0sj/DYrkiFKQQP6DmkW7lOQoigWj95tugrCgvbMdKIK+YHvktP6/9bRLKXWmEBJrj85/wA6SnmNe6mS9+Gi5w==
+"@react-three/drei@9.82.0":
+  version "9.82.0"
+  resolved "https://registry.npmjs.org/@react-three/drei/-/drei-9.82.0.tgz"
+  integrity sha512-3CUCfuyXgug47UyM9wv9Zug6Ly4RzvGcM9//w2sFXHQXrR/oxlAD+uD8Pvqt/jsszPUtj4pfLJCucC+FtyigIw==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@mediapipe/tasks-vision" "0.10.2-rc2"
+    "@mediapipe/tasks-vision" "0.10.2"
     "@react-spring/three" "~9.6.1"
     "@use-gesture/react" "^10.2.24"
     camera-controls "^2.4.2"
@@ -538,21 +538,23 @@
     meshline "^3.1.6"
     react-composer "^5.0.3"
     react-merge-refs "^1.1.0"
+    stats-gl "^1.0.4"
     stats.js "^0.17.0"
     suspend-react "^0.1.3"
     three-mesh-bvh "^0.6.0"
-    three-stdlib "^2.23.9"
+    three-stdlib "^2.25.1"
     troika-three-text "^0.47.2"
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@>=6.0", "@react-three/fiber@>=8.0", "@react-three/fiber@8.13.3":
-  version "8.13.3"
-  resolved "https://registry.npmjs.org/@react-three/fiber/-/fiber-8.13.3.tgz"
-  integrity sha512-mCdTUB8D1kwlsOSxGhUg5nuGHt3HN3aNFc0s9I/N7ayk+nzT2ttLdn49c56nrHu+YK+SU1xnrxe6LqftZgIRmQ==
+"@react-three/fiber@>=6.0", "@react-three/fiber@>=8.0", "@react-three/fiber@8.14.1":
+  version "8.14.1"
+  resolved "https://registry.npmjs.org/@react-three/fiber/-/fiber-8.14.1.tgz"
+  integrity sha512-Ky/FiCyJiyaI8bd+vckzgkHgKDSQDOcSSUVFOHCuCO9XOLb7Ebs6lof2hPpFa1HkaeE5ZIbTWIprvN0QqdPF0w==
   dependencies:
     "@babel/runtime" "^7.17.8"
     "@types/react-reconciler" "^0.26.7"
+    base64-js "^1.5.1"
     its-fine "^1.0.6"
     react-reconciler "^0.27.0"
     react-use-measure "^2.1.1"
@@ -680,6 +682,11 @@ attr-accept@^2.2.2:
   version "2.2.2"
   resolved "https://registry.npmjs.org/attr-accept/-/attr-accept-2.2.2.tgz"
   integrity sha512-7prDjvt9HmqiZ0cl5CRjtS84sEyhsHP2coDkaZKRKVfCDo9s7iw7ChVmar78Gu9pC4SoR/28wFu/G5JJhTnqEg==
+
+base64-js@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
+  integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
 bidi-js@^1.0.2:
   version "1.0.2"
@@ -1220,6 +1227,11 @@ split-string@^3.0.1:
   dependencies:
     extend-shallow "^3.0.0"
 
+stats-gl@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/stats-gl/-/stats-gl-1.0.5.tgz"
+  integrity sha512-XimMxvwnf1Qf5KwebhcoA34kcX+fWEkIl0QjNkCbu4IpoyDMMsOajExn7FIq5w569k45+LhmsuRlGSrsvmGdNw==
+
 stats.js@^0.17.0:
   version "0.17.0"
   resolved "https://registry.npmjs.org/stats.js/-/stats.js-0.17.0.tgz"
@@ -1247,7 +1259,7 @@ three-mesh-bvh@^0.6.0:
   resolved "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.6.8.tgz"
   integrity sha512-EGebF9DZx1S8+7OZYNNTT80GXJZVf+UYXD/HyTg/e2kR/ApofIFfUS4ZzIHNnUVIadpnLSzM4n96wX+l7GMbnQ==
 
-three-stdlib@^2.23.9:
+three-stdlib@^2.25.1:
   version "2.28.3"
   resolved "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.28.3.tgz"
   integrity sha512-mbKEJqDPosHZzSKdM8VurnuX1sRWFzNu6I3/v5DWNEJUA0S+03Cq5KaEwZng7ErjFp0rwwb39JdwAk8gNUbnuA==
