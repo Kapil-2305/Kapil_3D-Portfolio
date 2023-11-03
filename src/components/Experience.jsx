@@ -18,8 +18,8 @@ import {
       <>
         <OrbitControls />
         <Sky />
-        {/* <Environment preset="sunset" /> */}
-        <ambientLight/>
+        <Environment preset="sunset" />
+        {/* <ambientLight/> */}
         <group position-y={-1}>
           <ContactShadows
             opacity={0.42}
