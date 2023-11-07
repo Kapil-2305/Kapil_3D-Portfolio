@@ -11,7 +11,7 @@ import { Leva } from "leva";
 import {framerMotionConfig} from './config'
 
 function App() {
-	// const [section, setSection] = useState(0);
+	const [section, setSection] = useState(0);
 	// const [menuOpened, setMenuOpened] = useState(false);
 
 	// useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
 				<color attach="background" args={["#e6e7ff"]} />
 
 				<ScrollControls pages={4} damping={0.1}>
-					{/* <ScrollManager/> */}
+					<ScrollManager section={section} onSectionChange={setSection} />
 					<Scroll>
 						<Experience />
 					</Scroll>
@@ -34,7 +34,7 @@ function App() {
 				</ScrollControls>
 			</Canvas>
 
-			
+
 			{/* <MotionConfig
 				transition={{
 					...framerMotionConfig,

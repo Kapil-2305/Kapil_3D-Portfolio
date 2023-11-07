@@ -5,9 +5,26 @@ const Section = (props)=>{
     const {children} = props;
 
     return (
-        <section className='h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center'>
+        <motion.section
+            className={`
+            h-screen w-screen p-8 max-w-screen-2xl mx-auto
+            flex flex-col items-start justify-center
+            `}
+            initial={{
+                opacity: 0,
+                y: 50,
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                duration: 1,
+                delay: 0.6,
+                },
+            }}
+            >
             {children}
-        </section>
+        </motion.section>
     )
 }
 
@@ -34,14 +51,43 @@ const AboutSection = ()=>{
                 <br />
                 <span className='px-1 italic bg-white'>Kapil Paliwal</span>
             </h1>
-            <p className='text-lg text-gray-600 mt-4'>
+            <motion.p
+                className="text-lg text-gray-600 mt-4"
+                initial={{
+                    opacity: 0,
+                    y: 25,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                }}
+                transition={{
+                    duration: 1,
+                    delay: 1.5,
+                }}
+            >
                 I am Mern Stack Developer
                 <br/>
                 Learning about Three.js
-            </p>
-            <button className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-12`}>
-                Contact Me
-            </button>
+            </motion.p>
+            <motion.button
+                className={`bg-indigo-600 text-white py-4 px-8 
+            rounded-lg font-bold text-lg mt-16`}
+                initial={{
+                    opacity: 0,
+                    y: 25,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                }}
+                transition={{
+                    duration: 1,
+                    delay: 2,
+                }}
+            >
+                Contact me
+            </motion.button>
         </Section>
     )
 };
@@ -93,16 +139,16 @@ const SkillsSection = () => {
                             <motion.h3
                                 className="text-xl font-bold text-gray-800"
                                 initial={{
-                                opacity: 0,
+                                    opacity: 0,
                                 }}
                                 variants={{
-                                visible: {
-                                    opacity: 1,
-                                    transition: {
-                                    duration: 1,
-                                    delay: 1 + index * 0.2,
+                                    visible: {
+                                        opacity: 1,
+                                        transition: {
+                                            duration: 1,
+                                            delay: 1 + index * 0.2,
+                                        },
                                     },
-                                },
                                 }}
                             >
                                 {skill.title}
@@ -117,11 +163,11 @@ const SkillsSection = () => {
                                 }}
                                 variants={{
                                     visible: {
-                                    scaleX: 1,
-                                    transition: {
-                                        duration: 1,
-                                        delay: 1 + index * 0.2,
-                                    },
+                                        scaleX: 1,
+                                        transition: {
+                                            duration: 1,
+                                            delay: 1 + index * 0.2,
+                                        },
                                     },
                                 }}
                                 />
@@ -144,11 +190,11 @@ const SkillsSection = () => {
                                 }}
                                 variants={{
                                     visible: {
-                                    opacity: 1,
-                                    transition: {
-                                        duration: 1,
-                                        delay: 2 + index * 0.2,
-                                    },
+                                        opacity: 1,
+                                        transition: {
+                                            duration: 1,
+                                            delay: 2 + index * 0.2,
+                                        },
                                     },
                                 }}
                                 >
@@ -159,17 +205,17 @@ const SkillsSection = () => {
                                         className="h-full bg-indigo-500 rounded-full "
                                         style={{ width: `${lng.level}%` }}
                                         initial={{
-                                        scaleX: 0,
-                                        originX: 0,
+                                            scaleX: 0,
+                                            originX: 0,
                                         }}
                                         variants={{
-                                        visible: {
-                                            scaleX: 1,
-                                            transition: {
-                                            duration: 1,
-                                            delay: 2 + index * 0.2,
+                                            visible: {
+                                                scaleX: 1,
+                                                transition: {
+                                                    duration: 1,
+                                                    delay: 2 + index * 0.2,
+                                                },
                                             },
-                                        },
                                         }}
                                     />
                                 </div>
