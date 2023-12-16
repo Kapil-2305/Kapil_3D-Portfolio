@@ -3,10 +3,10 @@ import { Experience } from "./components/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import { MotionConfig } from "framer-motion";
-import ScrollManager from "./components/ScrollManager";
-import Interface from "./components/Interface";
-import Menu from "./components/Menu";
-import Cursor from "./components/Cursor";
+import { ScrollManager } from "./components/ScrollManager";
+import { Interface } from "./components/Interface";
+import { Menu } from "./components/Menu";
+import { Cursor } from "./components/Cursor";
 import { Leva } from "leva";
 import {framerMotionConfig} from './config'
 
@@ -31,14 +31,20 @@ function App() {
 					<ScrollControls pages={4} damping={0.1}>
 						<ScrollManager section={section} onSectionChange={setSection} />
 						<Scroll>
-							<Experience />
+							<Experience section={section} menuOpened={menuOpened} />
 						</Scroll>
 						<Scroll html>
 							<Interface />
 						</Scroll>
 					</ScrollControls>
 				</Canvas>
-				<Menu />
+
+				<Menu 
+					onSectionChange={setSection}
+					menuOpened={menuOpened}
+					setMenuOpened={setMenuOpened}
+				/>
+				
 				<Cursor />
 			</MotionConfig>
 			

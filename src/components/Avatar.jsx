@@ -29,7 +29,10 @@ export function Avatar(props) {
     standingAnimation[0].name = "Standing";
     fallingAnimation[0].name = "Falling";
 
-    const {actions} = useAnimations([typingAnimation[0], standingAnimation[0], fallingAnimation[0]], group);
+    const {actions} = useAnimations(
+        [typingAnimation[0], standingAnimation[0], fallingAnimation[0]], 
+        group
+    );
 
     useFrame((state)=>{
         if(headFollow){
