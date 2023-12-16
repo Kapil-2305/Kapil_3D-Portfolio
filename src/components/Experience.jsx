@@ -40,7 +40,7 @@ export const Experience = (props) => {
                 scale={[0.9, 0.9, 0.9]}
                 rotation-y={-Math.PI / 4}
                 animate={{
-                y: section === 0 ? 0 : -1,
+                    y: section === 0 ? 0 : -1,
                 }}
             >
                 <Office section={section} />
@@ -55,7 +55,7 @@ export const Experience = (props) => {
                 }}
             >
                 <directionalLight position={[-5, 3, 5]} intensity={0.4} />
-                
+
                 <Float>
                     <mesh position={[1, -3, -15]} scale={[2, 2, 2]}>
                         <sphereGeometry />
