@@ -1,5 +1,6 @@
 import { useControls } from "leva";
 import { Avatar } from "./Avatar";
+import { Office } from "./Office";
   
 export const Experience = () => {
         const { animation } = useControls({
@@ -12,6 +13,7 @@ export const Experience = () => {
     return (
         <>
             <ambientLight intensity={1}/>
+            <Office />
             <group position-y={-1}>
                 <Avatar animation={animation} />
                 {animation === "Typing" && (
