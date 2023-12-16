@@ -1,8 +1,9 @@
 import { useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import { gsap } from "gsap";
 import React, { useEffect, useRef } from 'react'
 
-const ScrollManager = (props) => {
+export const ScrollManager = (props) => {
     const {section, onSectionChange} = props;
 
     const data = useScroll();
@@ -38,11 +39,8 @@ const ScrollManager = (props) => {
         if(data.scroll.current < lastScroll.current && data.scroll.current < 1 / (data.pages - 1)){
             onSectionChange(0);
         }
+        lastScroll.current = data.scroll.current;
     })
 
-    return (
-        <div>ScrollManager</div>
-    )
+    return null;
 }
-
-export default ScrollManager

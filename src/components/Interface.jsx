@@ -25,7 +25,7 @@ const Section = (props)=>{
     )
 }
 
-const Interface = () => {
+export const Interface = () => {
     return (
         <div className='flex flex-col items-center w-screen'>
             <AboutSection />
@@ -37,8 +37,6 @@ const Interface = () => {
         </div>
     )
 }
-
-export default Interface;
 
 const AboutSection = ()=>{
     return (
