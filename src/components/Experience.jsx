@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { framerMotionConfig } from "../config";
 import { Avatar } from "./Avatar";
 import { Office } from "./Office";
+import { Background } from "./Background";
   
 export const Experience = (props) => {
     const { section, menuOpened } = props;
@@ -34,7 +35,7 @@ export const Experience = (props) => {
 
     return (
         <>
-            <ambientLight intensity={1} />
+            <Background />
             <motion.group
                 position={[1.5, 2, 3]}
                 scale={[0.9, 0.9, 0.9]}
