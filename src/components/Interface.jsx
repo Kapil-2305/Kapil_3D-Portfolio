@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { currentProjectAtom, projects } from './Projects';
 
 const Section = (props)=>{
     const {children} = props;
@@ -25,20 +27,20 @@ const Section = (props)=>{
     )
 }
 
-export const Interface = () => {
+export const Interface = (props) => {
+    const {setSection} = props;
     return (
         <div className='flex flex-col items-center w-screen'>
-            <AboutSection />
+            <AboutSection setSection={setSection}/>
             <SkillsSection />
-            <Section>
-                <h1>Projects</h1>
-            </Section>
+            <ProjectsSection/>
             <ContactSection/>
         </div>
     )
 }
 
-const AboutSection = ()=>{
+const AboutSection = (props)=>{
+    const {setSection} = props;
     return (
         <Section>
             <h1 className='text-6xl font-extrabold leading-snug'>
@@ -66,6 +68,7 @@ const AboutSection = ()=>{
                 Learning about Three.js
             </motion.p>
             <motion.button
+                onClick={() => setSection(3)}
                 className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16`}
                 initial={{
                     opacity: 0,
