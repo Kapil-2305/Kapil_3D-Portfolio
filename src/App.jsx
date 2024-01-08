@@ -1,17 +1,19 @@
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { MotionConfig } from "framer-motion";
 import { ScrollManager } from "./components/ScrollManager";
 import { Interface } from "./components/Interface";
 import { Menu } from "./components/Menu";
 import { Cursor } from "./components/Cursor";
+import { LoadingScreen } from "./components/LoadingScreen";
 import { Leva } from "leva";
 import {framerMotionConfig} from './config'
 
 function App() {
 	const [section, setSection] = useState(0);
+	const [started, setStarted] = useState(false);
 	const [menuOpened, setMenuOpened] = useState(false);
 
 	useEffect(() => {
@@ -20,6 +22,7 @@ function App() {
 
 	return (
 		<>
+		<LoadingScreen started={started} setStarted={setStarted} />
 			<MotionConfig
 				transition={{
 					...framerMotionConfig,
