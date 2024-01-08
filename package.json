@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@react-three/drei": "9.82.0",
     "@react-three/fiber": "8.14.1",
     "framer-motion": "^10.16.4",
