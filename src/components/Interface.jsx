@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from './Projects';
